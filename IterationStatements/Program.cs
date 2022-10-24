@@ -11,21 +11,17 @@ namespace IterationStatements
 
             //Three();
 
-            //Console.WriteLine(Equals(5, 5));
+            //Equals(5, 6);
 
             //EvenAndOdds();
 
-            //PostiveOrNegative();
+            //PostiveOrNegative(5);
 
             //OldEnoughToVote();
 
-            //int x;
-            //Console.Write("Enter number here ");
-            //x = int.Parse(Console.ReadLine());
-            //bool IsInRange = IsIntegerInRange(x);
-            //Console.WriteLine($"{x} is in range = {IsInRange}");
+            IsIntegerInRange(0);
 
-            PrintTable();
+            //PrintTable();
         }
 
         // Write a method that will print to the console all numbers 1000 through -1000
@@ -46,14 +42,21 @@ namespace IterationStatements
                 Console.WriteLine(a);
         }
 
-        //Write a method to accept two integers as parameterss and check whether they are equal or not
+        //Write a method to accept two integers as parameters and check whether they are equal or not
 
-        public static bool Equals(int m, int n)
+        public static void Equals(int m, int n)
         {
-            if (m == n) return true;
+            if (m == n)
+            {
+                Console.WriteLine("Those numbers are equal.");
+            }
+            else
+            {
+                Console.WriteLine("Those numbers are not equal");
+            }
 
-            else return false;
-        }
+        }     
+
 
         //Write a method to check whether a given number is even or odd
 
@@ -74,11 +77,9 @@ namespace IterationStatements
 
         //Write a method to check whether a given number is positive or negative
 
-        public static void PostiveOrNegative()
+        public static void PostiveOrNegative(int y)
         {
-            int y;
-            Console.Write("Enter number here ");
-            y = int.Parse(Console.ReadLine());
+            
             if (y <= 0)
             {
                 Console.WriteLine("Number is negative");
@@ -89,7 +90,7 @@ namespace IterationStatements
             }
             else
             {
-                Console.WriteLine("0");
+                Console.WriteLine($"{y} is neither negative or postive");
             }
         }
 
@@ -111,15 +112,21 @@ namespace IterationStatements
         }
 
         //Write a method to check if an integer(from the user) is in the range -10 to 10
-        public static bool IsIntegerInRange(int x)
+        public static void IsIntegerInRange(int x)
         {
-
             if (x > 10)
-                return false;
-            if (x < -10)
-                return false;
+            {
+                Console.WriteLine("Out of range");
+            }
+            else if (x < -10)
+            {
+                Console.WriteLine("Out of range");
+            }
+            else
+            {
+                Console.WriteLine("Is in rnage");
+            }
 
-            return true;
         }
 
         //Write a method to display the multiplication table(from 1 to 12) of a given integer
